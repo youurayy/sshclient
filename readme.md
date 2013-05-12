@@ -17,7 +17,7 @@ var opts = {
     privateKey: fs.readFileSync('./somekey.pem'),
 
     debug: true, // optional
-    console: console, // allows logger overriding
+    console: console, // optional, allows logger overriding
 
     session: [
         { op: 'writeFile', path: '/mydir/myfile.txt', body: 'my utf8 body, or a buffer\n' },
@@ -35,6 +35,17 @@ sshclient.session(opts, _x(cb, true, function(err) {
 ## use 2
 
 ```js
+var opts = {
+
+    host: 'myhost',
+    port: 22,
+    username: 'ubuntu',
+    privateKey: fs.readFileSync('./somekey.pem'),
+
+    debug: true, // optional
+    console: console // optional, allows logger overriding
+};
+
 sshclient.session(opts, _x(cb, true, function(err, ses) {
    
     async.series([
