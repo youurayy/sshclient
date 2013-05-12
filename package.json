@@ -1,0 +1,32 @@
+{
+    "author": "Juraj Vitko (ypocat.com)",
+    "name": "sshclient",
+    "description": "SSH Client for Node.js",
+    "keywords": [ "ssh", "client" ],
+    "version": "0.0.1",
+    "homepage": "http://github.com/ypocat/sshclient",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/ypocat/sshclient.git"
+    },
+    "main": "lib/sshclient.js",
+    "directories": {
+        "lib": "./lib"
+    },
+    "engines": {
+        "node": "*"
+    },
+    "dependencies": {
+        "ssh2": "*",
+        "laeh2": "*",
+        "async-mini": "*"
+    },
+    "devDependencies": {
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url" : "https://raw.github.com/ypocat/gfms/master/license.txt"
+        }
+    ]
+}
