@@ -34,8 +34,8 @@ sshclient.session(opts, _x(cb, true, function(err) {
 
 notes:
 - optional for `exec()`: `canFail: true`, continue if the command fails
-- optional for `writeFile()`: `mode: 'mode'`, [see here](http://nodejs.org/docs/latest/api/fs.html#fs_fs_open_path_flags_mode_callback), e.g. `'w'` for overwrite, `'a'` for append
-- optional for `writeFile()`: `atts: '{ atts }'`, [see here](http://nodejs.org/docs/latest/api/fs.html#fs_class_fs_stats) (only the setable ones)
+- optional for `writeFile()`: `flags: 'flags'`, [see here](http://nodejs.org/docs/latest/api/fs.html#fs_fs_open_path_flags_mode_callback), e.g. `'w'` for overwrite, `'a'` for append (on `'a*'` flags, pointer is automatically positioned to the end of the file)
+- optional for `writeFile()`: `mode: 0666`, [see here](http://nodejs.org/docs/latest/api/fs.html#fs_class_fs_stats) (only the setable ones)
 
 ## use 2
 
@@ -71,5 +71,5 @@ sshclient.session(opts, _x(cb, true, function(err, ses) {
 }));
 ```
 notes:
-- optional for `writeFile()`: `mode` and `atts` (sig: `writeFile(path, bodyOrBuff, mode, atts, cb)` - see [use 1](#use-1) for explanation
+- optional for `writeFile()`: `flags` and `mode` (sig: `writeFile(path, bodyOrBuff, flags, mode, cb)` - see [use 1](#use-1) for explanation
 

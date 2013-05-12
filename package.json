@@ -3,7 +3,7 @@
     "name": "sshclient",
     "description": "SSH Client for Node.js",
     "keywords": [ "ssh", "client" ],
-    "version": "0.0.2",
+    "version": "0.0.3",
     "homepage": "http://github.com/ypocat/sshclient",
     "repository": {
         "type": "git",
